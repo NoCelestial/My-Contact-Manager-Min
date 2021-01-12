@@ -1,0 +1,16 @@
+D:\Project\My-Contact-Manager-Min\src\bin\Debug\net5.0\src.exe
+D:\Project\My-Contact-Manager-Min\src\bin\Debug\net5.0\src.deps.json
+D:\Project\My-Contact-Manager-Min\src\bin\Debug\net5.0\src.runtimeconfig.json
+D:\Project\My-Contact-Manager-Min\src\bin\Debug\net5.0\src.runtimeconfig.dev.json
+D:\Project\My-Contact-Manager-Min\src\bin\Debug\net5.0\src.dll
+D:\Project\My-Contact-Manager-Min\src\bin\Debug\net5.0\ref\src.dll
+D:\Project\My-Contact-Manager-Min\src\bin\Debug\net5.0\src.pdb
+D:\Project\My-Contact-Manager-Min\src\obj\Debug\net5.0\src.csprojAssemblyReference.cache
+D:\Project\My-Contact-Manager-Min\src\obj\Debug\net5.0\src.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\My-Contact-Manager-Min\src\obj\Debug\net5.0\src.AssemblyInfoInputs.cache
+D:\Project\My-Contact-Manager-Min\src\obj\Debug\net5.0\src.AssemblyInfo.cs
+D:\Project\My-Contact-Manager-Min\src\obj\Debug\net5.0\src.csproj.CoreCompileInputs.cache
+D:\Project\My-Contact-Manager-Min\src\obj\Debug\net5.0\src.dll
+D:\Project\My-Contact-Manager-Min\src\obj\Debug\net5.0\ref\src.dll
+D:\Project\My-Contact-Manager-Min\src\obj\Debug\net5.0\src.pdb
+D:\Project\My-Contact-Manager-Min\src\obj\Debug\net5.0\src.genruntimeconfig.cache
