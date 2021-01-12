@@ -1,12 +1,15 @@
 ﻿using System;
 
-namespace src
+namespace My_Contac_Manager_Min
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //program start
+            Console.WriteLine("For Quit Press Any Key");
+            Console.ReadKey();
         }
+        
     }
 }
