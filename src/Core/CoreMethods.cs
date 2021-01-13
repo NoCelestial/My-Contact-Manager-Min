@@ -1,6 +1,6 @@
 using System;
 
-namespace My_Contac_Manager_Min
+namespace My_Contac_Manager_Min.Core
 {
     static class CoreMethods
     {
