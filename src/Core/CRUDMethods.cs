@@ -85,10 +85,5 @@ namespace My_Contac_Manager_Min.Core
                 Console.ResetColor();
             }
         }
-        public void Close()
-        {
-            connection.Close();
-        }
-
     }
 }
