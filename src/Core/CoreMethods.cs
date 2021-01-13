@@ -65,5 +65,29 @@ namespace My_Contac_Manager_Min
             Console.WriteLine("Welcome To My Contact Manager V 1.0\nFor More Informtion Of Me Write '-about'\nFor Help And Interduction Methods Write '-help' ");
             Console.ResetColor();
         }
+
+        public static void Example(string[] com)
+        {
+            switch (com[1])
+            {
+                case "-add":
+                    System.Console.WriteLine("-add AmirAli Shokri 1234567890");
+                    break;
+                case "-edit":
+                    System.Console.WriteLine("-edit 1234567890 Amir Shokri");
+                    break;
+                case "-remove":
+                    System.Console.WriteLine("-remove 1234567890");
+                    break;
+                case "-search":
+                    System.Console.WriteLine("-search firstname Ali");
+                    break;
+                default:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    System.Console.WriteLine("I Cant Found This Method");
+                    Console.ResetColor();
+                    break;
+            }
+        }
     }
 }
