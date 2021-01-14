@@ -35,12 +35,14 @@ namespace My_Contac_Manager_Min.Core
                 Console.ForegroundColor = ConsoleColor.Green;
                 System.Console.WriteLine("Success !!");
                 Console.ResetColor();
+                CoreMethods.ChoiseMethod();
             }
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 System.Console.WriteLine(e.ToString());
                 Console.ResetColor();
+                CoreMethods.ChoiseMethod();
             }
         }
         public void Edit(string[] com )
@@ -57,12 +59,14 @@ namespace My_Contac_Manager_Min.Core
                 Console.ForegroundColor = ConsoleColor.Green;
                 System.Console.WriteLine("Success !!");
                 Console.ResetColor();
+                CoreMethods.ChoiseMethod();
             }
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 System.Console.WriteLine(e.ToString());
                 Console.ResetColor();
+                CoreMethods.ChoiseMethod();
             }
         }
         public void Remove(string[] com)
@@ -77,12 +81,14 @@ namespace My_Contac_Manager_Min.Core
                 Console.ForegroundColor = ConsoleColor.Green;
                 System.Console.WriteLine("Success !!");
                 Console.ResetColor();
+                CoreMethods.ChoiseMethod();
             }
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 System.Console.WriteLine(e.ToString());
                 Console.ResetColor();
+                CoreMethods.ChoiseMethod();
             }
         }
     }

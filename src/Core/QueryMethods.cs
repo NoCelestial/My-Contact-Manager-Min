@@ -26,7 +26,8 @@ namespace My_Contac_Manager_Min.Core
             {
                 var query = connection.CreateCommand();
                 query.Connection = connection;
-                query.CommandText = "SELECT * FROM Contact WHERE $t LIKE '%$v%' OR $t LIKE '%v' OR $t LIKE 'v%' OR $t = $v";
+                query.CommandText = "SELECT * FROM Contact" +
+                " WHERE ($t LIKE '%$v%') OR ($t LIKE '%v') OR ($t LIKE 'v%') OR ($t = $v)";
                 query.Parameters.AddWithValue("$t", com[1]);
                 query.Parameters.AddWithValue("$v", com[2]);
                 using (var reader = query.ExecuteReader())
@@ -40,12 +41,14 @@ namespace My_Contac_Manager_Min.Core
                         System.Console.WriteLine($"|   {firstname}   |   {lastname}   |   {phone}   |");
                     }
                 }
+                CoreMethods.ChoiseMethod();
             }
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 System.Console.WriteLine(e.ToString());
                 Console.ResetColor();
+                CoreMethods.ChoiseMethod();
             }
         }
         public void Show()
@@ -66,12 +69,14 @@ namespace My_Contac_Manager_Min.Core
                         System.Console.WriteLine($"|   {firstname}   |   {lastname}   |   {phone}   |");
                     }
                 }
+                CoreMethods.ChoiseMethod();
             }
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 System.Console.WriteLine(e.ToString());
                 Console.ResetColor();
+                CoreMethods.ChoiseMethod();
             }
         }
     }

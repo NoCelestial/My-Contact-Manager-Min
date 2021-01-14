@@ -1,4 +1,5 @@
 using System;
+using Microsoft.Data.Sqlite;
 
 namespace My_Contac_Manager_Min.Core
 {
@@ -20,6 +21,7 @@ namespace My_Contac_Manager_Min.Core
             "** Phone Number Is Basic ID For Validate Contact You aren't Change This **" +
             "** In Edit If You Want To Edit A Parameter Write In Param <-> Use Example For See This **");
             Console.ResetColor();
+            ChoiseMethod();
         }
         //About Method For Interduction Me
         public static void About()
@@ -27,29 +29,41 @@ namespace My_Contac_Manager_Min.Core
             Console.ForegroundColor = ConsoleColor.Yellow;
             System.Console.WriteLine("Im Amir Ali Shokri This Is My Git Hub Profile https://github.com/AmirAliShokri");
             Console.ResetColor();
+            ChoiseMethod();
         }
         //Choise Method For Connect The Command To Methods
         public static void ChoiseMethod()
         {
             System.Console.WriteLine("Enter Method If You Don't Have Any Opinion Write '-help' ");
             string[] com = Console.ReadLine().Split(' ');
+            var conn = new SqliteConnection("Data Source=../../../src.db");
+            QueryMethods qm = new QueryMethods(conn);
+            CRUDMethods cRUDMethods = new CRUDMethods(conn);
             switch (com[0])
             {
                 case "-help":
+                    Help();
                     break;
                 case "-about":
+                    About();
                     break;
                 case "-add":
+                    cRUDMethods.Create(com);
                     break;
                 case "-edit":
+                    cRUDMethods.Edit(com);
                     break;
                 case "-remove":
+                    cRUDMethods.Remove(com);
                     break;
                 case "-show":
+                    qm.Show();
                     break;
                 case "-search":
+                    qm.Search(com);
                     break;
                 case "-example":
+                    Example(com);
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -57,6 +71,8 @@ namespace My_Contac_Manager_Min.Core
                     Console.ResetColor();
                     break;
             }
+            conn.Close();
+            ChoiseMethod();
         }
         //Program Start Method
         public static void Start()
@@ -64,6 +80,7 @@ namespace My_Contac_Manager_Min.Core
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Welcome To My Contact Manager V 1.0\nFor More Informtion Of Me Write '-about'\nFor Help And Interduction Methods Write '-help' ");
             Console.ResetColor();
+            ChoiseMethod();
         }
 
         public static void Example(string[] com)
@@ -88,6 +105,7 @@ namespace My_Contac_Manager_Min.Core
                     Console.ResetColor();
                     break;
             }
+            ChoiseMethod();
         }
     }
 }
