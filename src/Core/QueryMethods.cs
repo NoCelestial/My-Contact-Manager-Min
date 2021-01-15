@@ -26,10 +26,26 @@ namespace My_Contac_Manager_Min.Core
             {
                 var query = connection.CreateCommand();
                 query.Connection = connection;
-                query.CommandText = "SELECT * FROM Contact" +
-                " WHERE ($t LIKE '%$v%') OR ($t LIKE '%v') OR ($t LIKE 'v%') OR ($t = $v)";
-                query.Parameters.AddWithValue("$t", com[1]);
-                query.Parameters.AddWithValue("$v", com[2]);
+                switch (com[1])
+                {
+                    case "firstname":
+                        query.CommandText = "SELECT * FROM Contact WHERE FirstName = $val";
+                        break;
+                    case "lastnamr":
+                        query.CommandText = "SELECT * FROM Contact WHERE LastName = $val";
+                        break;
+                    case "phone":
+                        query.CommandText = "SELECT * FROM Contact WHERE Phone = $val";
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        System.Console.WriteLine("Wat ?! ...");
+                        Console.ResetColor();
+                        CoreMethods.ChoiseMethod();
+                        break;
+
+                }
+                query.Parameters.AddWithValue("$val", com[2]);
                 using (var reader = query.ExecuteReader())
                 {
                     System.Console.WriteLine("|   First Name   |   Last Name   |   Phone   |");

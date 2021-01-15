@@ -18,8 +18,7 @@ namespace My_Contac_Manager_Min.Core
             "6- -show \t\t\tFor Show All Contacts\n" +
             "7- -search <type> <value> \t\t\t For Search Contact\n" +
             "8- -example <command> \t\t\tFor Show Target Command Example \n" +
-            "** Phone Number Is Basic ID For Validate Contact You aren't Change This **" +
-            "** In Edit If You Want To Edit A Parameter Write In Param <-> Use Example For See This **");
+            "** Phone Number Is Basic ID For Validate Contact You aren't Change This **");
             Console.ResetColor();
             ChoiseMethod();
         }
