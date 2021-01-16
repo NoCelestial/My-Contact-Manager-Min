@@ -18,9 +18,15 @@ namespace My_Contac_Manager_Min.Core
             "6- -show \t\t\tFor Show All Contacts\n" +
             "7- -search <type> <value> \t\t\t For Search Contact\n" +
             "8- -example <command> \t\t\tFor Show Target Command Example \n" +
+            "9- -quit \t\t\tFor Quit\n" +
             "** Phone Number Is Basic ID For Validate Contact You aren't Change This **");
             Console.ResetColor();
             ChoiseMethod();
+        }
+        public static void Quit()
+        {
+            System.Console.WriteLine("Bye");
+            Environment.Exit(0);
         }
         //About Method For Interduction Me
         public static void About()
@@ -48,6 +54,9 @@ namespace My_Contac_Manager_Min.Core
                     break;
                 case "-add":
                     cRUDMethods.Create(com);
+                    break;
+                case "-quit":
+                    Quit();
                     break;
                 case "-edit":
                     cRUDMethods.Edit(com);
