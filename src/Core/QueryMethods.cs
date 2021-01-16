@@ -51,10 +51,7 @@ namespace My_Contac_Manager_Min.Core
                     System.Console.WriteLine("|   First Name   |   Last Name   |   Phone   |");
                     while (reader.Read())
                     {
-                        var phone = reader.GetInt32(0);
-                        var firstname = reader.GetString(0);
-                        var lastname = reader.GetString(1);
-                        System.Console.WriteLine($"|   {firstname}   |   {lastname}   |   {phone}   |");
+                        System.Console.WriteLine($"|   {reader[0]}   |   {reader[1]}   |   {reader[2]}   |");
                     }
                 }
                 CoreMethods.ChoiseMethod();
@@ -79,10 +76,7 @@ namespace My_Contac_Manager_Min.Core
                     System.Console.WriteLine("|   First Name   |   Last Name   |   Phone   |");
                     while (reader.Read())
                     {
-                        var phone = reader.GetInt32(0);
-                        var firstname = reader.GetString(0);
-                        var lastname = reader.GetString(1);
-                        System.Console.WriteLine($"|   {firstname}   |   {lastname}   |   {phone}   |");
+                        System.Console.WriteLine($"|   {reader[0]}   |   {reader[1]}   |   {reader[2]}   |");
                     }
                 }
                 CoreMethods.ChoiseMethod();

@@ -27,7 +27,7 @@ namespace My_Contac_Manager_Min.Core
             {
                 var query = connection.CreateCommand();
                 query.Connection = connection;
-                query.CommandText = "INSERT INTO Contact (FirstName,LastName,Phone) VALUES($fn,$ln,$p)";
+                query.CommandText = "INSERT INTO Contact (FirstName,LastName,Phone) VALUES($fn,$ln,$p);";
                 query.Parameters.AddWithValue("$fn", com[1]);
                 query.Parameters.AddWithValue("$ln", com[2]);
                 query.Parameters.AddWithValue("$p", int.Parse(com[3]));
@@ -51,7 +51,7 @@ namespace My_Contac_Manager_Min.Core
             {
                 var query = connection.CreateCommand();
                 query.Connection = connection;
-                query.CommandText = "UPDATE Contact SET FirstName = $fn , LastName = $ln WHERE Phone = $p";
+                query.CommandText = "UPDATE Contact SET FirstName = $fn , LastName = $ln WHERE Phone = $p;";
                 query.Parameters.AddWithValue("$fn", com[2]);
                 query.Parameters.AddWithValue("$ln", com[3]);
                 query.Parameters.AddWithValue("$p", int.Parse(com[1]));
@@ -75,7 +75,7 @@ namespace My_Contac_Manager_Min.Core
             {
                 var query = connection.CreateCommand();
                 query.Connection = connection;
-                query.CommandText = "DELETE FROM Contact WHERE Phone = $p";
+                query.CommandText = "DELETE FROM Contact WHERE Phone = $p;";
                 query.Parameters.AddWithValue("$p", int.Parse(com[1]));
                 query.ExecuteNonQuery();
                 Console.ForegroundColor = ConsoleColor.Green;
